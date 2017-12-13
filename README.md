@@ -2,6 +2,7 @@ proxy.py
 ========
 
 带用户行为控制功能的轻量级HTTP代理服务器
+
 Lightweight HTTP Proxy Server in Python with User's Behavior Control
 
 Features
@@ -41,4 +42,5 @@ blocked words:  words that are blocked in a html page
 
 Having difficulty using proxy.py? Report at:
 https://github.com/chenjeyok/proxy.py/issues/new
+or Contact with chenjay@sjtu.edu.cn
 ```
