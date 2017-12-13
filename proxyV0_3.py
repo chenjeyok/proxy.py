@@ -4,10 +4,12 @@
 # 另外，鉴于编码在本程序中有非常重要的作用，弄清楚python中编码的概念是很有必要的
 # 这篇文章讲得比较清楚： http://blog.csdn.net/lxdcyh/article/details/4018054
 """
-    proxy alpha V0.3版
-    2017/12/13
-    Bryce Chen
-    chenjay@sjtu.edu.cn
+    2017/12/13 proxy V0.3
+    
+    带用户行为控制功能的轻量级HTTP代理服务器
+    Lightweight HTTP Proxy Server in Python with User's Behavior Control
+    
+    Bryce Chen (chenjay@sjtu.edu.cn)
     
     类：
         代理中心        Proxy ： 统筹代理各方面组件交互
@@ -24,7 +26,6 @@
         
         
 """
-# 该段没有实质内容
 VERSION = (0, 2)
 __version__ = '.'.join(map(str, VERSION[0:2]))
 __description__ = 'HTTP Proxy Server in Python'
