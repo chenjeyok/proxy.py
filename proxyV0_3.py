@@ -6,7 +6,9 @@
 """
     proxy alpha V0.3版
     2017/12/13
-    Bryce Chen:
+    Bryce Chen
+    chenjay@sjtu.edu.cn
+    
     类：
         代理中心        Proxy ： 统筹代理各方面组件交互
         客户端/服务端   Client/Server (继承自 连接Connection) ： 对浏览器、服务器连接的抽象，封装数据传输行为

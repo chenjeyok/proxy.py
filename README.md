@@ -1,41 +1,44 @@
 proxy.py
 ========
 
-Lightweight HTTP Proxy Server in Python.
+带用户行为控制功能的轻量级HTTP代理服务器
+Lightweight HTTP Proxy Server in Python with User's Behavior Control
 
 Features
 --------
 
-- Distributed as a single file module
-- No dependency other than the Python standard library
-- Support for http, https, websockets request proxy
+- 用户上网行为控制、敏感词过滤、上网日志记录
+- User's Behavor Control, Specific Words Blocking, Surfing Log
+- 兼容gzip压缩格式的网页
+- support gzip compressed http page
 
-Install
--------
-
-To install proxy.py, simply:
-
-	$ pip install proxy.py
-
-This will add `proxy.py` inside your python bin folder.
 
 Usage
 -----
 
 ```
-$ proxy.py -h
-usage: proxy.py [-h] [--hostname HOSTNAME] [--port PORT]
-                [--log-level LOG_LEVEL]
+$ python porxyV0_3.py
 
-proxy.py v0.1
+所有的配置都在数据库db.db (sqlite3)中, 我现在用SQLite Studion和数据库交互（系统设置、敏感词设置等等）
+数据库中的表:
 
-optional arguments:
-  -h, --help            show this help message and exit
-  --hostname HOSTNAME   Default: 127.0.0.1
-  --port PORT           Default: 8899
-  --log-level LOG_LEVEL
-                        DEBUG, INFO, WARNING, ERROR, CRITICAL
+配置文件：   带有运行模式（黑白名单）、是否启用敏感词过滤、是否记录日志、服务器端口等设置
+黑名单拦截：  黑名单规则
+白名单模式：  白名单规则
+访问日志：    访问日志
+敏感词屏蔽：  被屏蔽的敏感词，以及其替代符号
+
+Configurations are stored in database db.db(sqlite3)
+I'm currently using SQLite3 Studio to interact with the database
+
+tables in db.db
+config:         configurations (server port, blocking mode .etc)
+black list:     rules to block user's behavior
+white list:     rules to allow user's behavior
+log:            surfing log
+blocked words:  words that are blocked in a html page
+
 
 Having difficulty using proxy.py? Report at:
-https://github.com/abhinavsingh/proxy.py/issues/new
+https://github.com/chenjeyok/proxy.py/issues/new
 ```
